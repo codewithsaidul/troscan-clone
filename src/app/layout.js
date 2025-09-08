@@ -1,5 +1,6 @@
 import { Archivo } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -15,7 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${archivo.variable} antialiased`}>{children}</body>
+      <body className={`${archivo.variable} antialiased`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
