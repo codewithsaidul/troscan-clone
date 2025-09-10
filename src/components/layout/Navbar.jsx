@@ -4,9 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
-// Ei Navbar component-ti apnar dewa specific nirdeshona onujayi banano hoyeche.
-// Ekhanei mobile menu-r jonno 'X' animation ebong scroll effect dewa ache.
-// Kono external animation library (Framer Motion) use kora hoy nai.
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,13 +39,13 @@ export default function Navbar() {
 
           {/* Right: Desktop "Contact Us" Button */}
           <div className="hidden md:block">
-            <Button variant="default" asChild>
+            <button className="py-4 px-6 rounded-lg bg-primary text-accent text-sm duration-700 hover:bg-secondary hover:duration-700 cursor-pointer">
               <Link
                 href="#"
               >
                 Contact Us
               </Link>
-            </Button>
+            </button>
           </div>
 
           {/* Right: Mobile Hamburger Button */}
@@ -76,7 +73,7 @@ export default function Navbar() {
         {/* Mobile Menu Dropdown */}
         {/* Eta shudhu mobile-e dekhabe and menu open thakle */}
         <div
-          className={`md:hidden duration-700 overflow-hidden ${
+          className={`md:hidden duration-700 overflow-hidden will-change-scroll ${
             isMenuOpen ? "max-h-screen pb-4" : "max-h-0"
           }`}
         >
