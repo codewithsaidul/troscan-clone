@@ -5,7 +5,7 @@
 
 :root {
   --primary: #8d493a;
-  --secondary: #f8ede3;
+  --secondary: rgb(180, 87, 65);
   --radius: 0.625rem;
   --background: #ffffff;
   --foreground: #000000;
@@ -18,7 +18,7 @@
   --muted: rgb(248, 237, 227);
   --muted-foreground: #000000;
   --accent: #f8ede3;
-  --accent-foreground: #8d493a;
+  --accent-foreground: rgb(248, 237, 227);
   --destructive: #8d493a;
   --border: #8d493a;
   --input: #8d493a;

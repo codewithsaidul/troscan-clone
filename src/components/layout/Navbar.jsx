@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="relative w-full max-w-5xl mx-auto bg-muted rounded-lg duration-700">
         <nav className="px-6 py-4 flex justify-between items-center">
           {/* Left: Logo */}
-          <Link href="/" className="text-xl font-bold text-[#955546] z-20">
+          <Link href="/" className="text-xl font-bold text-primary z-20">
             Troscán
           </Link>
 
@@ -33,7 +33,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-[#955546] font-semibold"
+                className="text-primary font-semibold duration-500 hover:text-secondary hover:duration-500"
               >
                 {link.name}
               </Link>
@@ -60,12 +60,12 @@ export default function Navbar() {
             >
               {/* Humberger menu-r line 2ta, ja 'X' hoye jabe */}
               <span
-                className={`block h-0.5 w-5 bg-white transition-transform duration-300 ease-in-out ${
+                className={`block h-0.5 w-5 bg-accent transition-transform duration-300 ease-in-out ${
                   isMenuOpen ? "rotate-45 translate-y-[4px]" : ""
                 }`}
               ></span>
               <span
-                className={`block h-0.5 w-5 bg-white transition-transform duration-300 ease-in-out ${
+                className={`block h-0.5 w-5 bg-accent transition-transform duration-300 ease-in-out ${
                   isMenuOpen ? "-rotate-45 -translate-y-[4px]" : ""
                 }`}
               ></span>
@@ -76,7 +76,7 @@ export default function Navbar() {
         {/* Mobile Menu Dropdown */}
         {/* Eta shudhu mobile-e dekhabe and menu open thakle */}
         <div
-          className={`md:hidden transition-all duration-700 overflow-hidden ${
+          className={`md:hidden duration-700 overflow-hidden ${
             isMenuOpen ? "max-h-screen pb-4" : "max-h-0"
           }`}
         >
@@ -85,7 +85,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="block w-full text-center py-2 text-[#955546] font-semibold text-sm duration-500 hover:text-[rgb(180, 87, 65)] hover:duration-500"
+                className="block w-full text-center py-2 text-primary font-semibold text-sm duration-500 hover:text-secondary hover:duration-500"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
@@ -94,7 +94,7 @@ export default function Navbar() {
             <Button variant="default" asChild>
               <Link
                 href="#"
-                className="text-center text-sm text-[rgb(248, 237, 227)]"
+                className="text-center text-sm text-accent-foreground"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact Us
