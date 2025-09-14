@@ -17,8 +17,8 @@ export default function Navbar() {
   return (
     <header className="fixed top-4 left-4 right-4 z-50">
       {/* Main wrapper for background and rounded corners */}
-      <div className="relative w-full max-w-5xl mx-auto bg-muted rounded-lg duration-700">
-        <nav className="px-6 py-4 flex justify-between items-center">
+      <div className="relative w-full max-w-3xl mx-auto bg-muted shadow-[0_4px_12px_rgba(0,0,0,0.3)] rounded-lg duration-700">
+        <nav className="px-6 py-2 flex justify-between items-center">
           {/* Left: Logo */}
           <Link href="/" className="text-xl font-bold text-primary z-20">
             Troscán
